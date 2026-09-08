@@ -4,4 +4,4 @@ Allow: /
 Sitemap:User-agent: *
 Allow: /
 
-Sitemap: https://bikalpatimsina99-oss.github.io/sanjog-krishi-farm/sitemap.xmlsitemap.xml
+Sitemap: https://bikalpatimsina99-oss.github.io/sanjog-krishi-farm-skf-/sitemap.xmlsitemap.xml
