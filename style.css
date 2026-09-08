@@ -622,6 +622,405 @@ h2 em {
 
     margin-bottom: 27px;
 }
+/* =========================
+   FARM BANNER
+========================= */
+
+.farm-banner {
+
+    min-height: 530px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(15, 44, 22, 0.91),
+            rgba(18, 54, 25, 0.58)
+        ),
+
+        url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1800&q=85")
+
+        center / cover;
+}
+
+
+.farm-banner > div {
+
+    width: min(1120px, 88%);
+
+    margin: auto;
+}
+
+
+.farm-banner h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    margin: 14px 0;
+}
+
+
+.farm-banner p {
+
+    max-width: 470px;
+
+    color: #d9e5d6;
+
+    margin-bottom: 27px;
+}
+/* ================= FISH FARMING ================= */
+
+.fish-section {
+    padding: 80px 7%;
+    background: #f5fbf7;
+}
+
+.fish-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #dff5e7;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.fish-header h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.fish-header p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FISH INFO
+========================= */
+
+.fish-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+.fish-card {
+    background: white;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fish-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.fish-icon {
+    font-size: 45px;
+}
+
+.fish-card h3 {
+    margin: 15px 0 8px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.fish-media {
+    margin-top: 60px;
+}
+
+.fish-media > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+/* Gallery grid */
+
+.fish-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Gallery card */
+
+.fish-photo {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fish-photo:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Square image */
+
+.fish-photo img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Gallery title */
+
+.fish-photo h3 {
+    padding: 15px 30px;
+    margin: 0;
+    font-size: 20px;
+    color: #123b2a;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .fish-info,
+    .fish-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .fish-info,
+    .fish-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .fish-card {
+        padding: 20px;
+    }
+
+    .fish-media > h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =====================================
+   FISH FARM VIDEOS
+===================================== */
+
+.fish-videos {
+    padding: 70px 0;
+}
+
+.fish-videos-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fish-videos-header h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    color: #123b2a;
+}
+
+.fish-videos-header p {
+    margin: 0;
+    color: #66756d;
+    font-size: 16px;
+}
+
+
+/* VIDEO GRID */
+
+.fish-video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* VIDEO CARD */
+
+.fish-video-card {
+    background: #ffffff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+}
+
+.fish-video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.13);
+}
+
+
+/* VIDEO AREA */
+
+.fish-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #123b2a;
+}
+
+.fish-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.fish-video-card:hover .fish-video img {
+    transform: scale(1.06);
+}
+
+
+/* DARK OVERLAY */
+
+.fish-video::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+
+
+/* PLAY BUTTON */
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #0d6847;
+
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    background: #0d6847;
+    color: white;
+    transform: translate(-50%, -50%) scale(1.12);
+}
+
+
+/* VIDEO INFORMATION */
+
+.fish-video-content {
+    padding: 22px 25px 25px;
+}
+
+.fish-video-content .video-label {
+    display: inline-block;
+
+    padding: 5px 12px;
+    margin-bottom: 10px;
+
+    border-radius: 20px;
+
+    background: #e7f6ef;
+    color: #087448;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.fish-video-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 21px;
+    color: #123b2a;
+}
+
+.fish-video-content p {
+    margin: 0;
+
+    color: #6b7771;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .fish-videos {
+        padding: 50px 20px;
+    }
+
+    .fish-video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .fish-videos-header h2 {
+        font-size: 28px;
+    }
+
+}
+
 
 
 /* =========================
