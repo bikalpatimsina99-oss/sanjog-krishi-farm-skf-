@@ -1562,9 +1562,7 @@ footer small {
 
         font-size: 40px;
     }
-}/* WHATSAPP FLOATING ICON */
-
-.whatsapp-float {
+}.whatsapp-float {
     position: fixed;
     right: 25px;
     top: 50%;
@@ -1613,4 +1611,3 @@ footer small {
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
-}
