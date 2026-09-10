@@ -1610,4 +1610,31 @@ footer small {
 
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
+    }/* DISCOVER OUR FARM BUTTON */
+
+.discover-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #286238;
+    font-size: 18px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.discover-btn span {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.discover-btn:hover {
+    color: #78a83f;
+}
+
+.discover-btn:hover span {
+    transform: translateX(8px);
+}
