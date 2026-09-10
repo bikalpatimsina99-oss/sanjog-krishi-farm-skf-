@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Our Farm | Sanjog Krishi Farm</title>
+
+    <meta name="description"
+          content="Discover Sanjog Krishi Farm, our farming journey, sustainable practices, collaborations, photos and videos.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           FARM PAGE
+        ========================= */
+
+        .farm-page {
+            background: #f7f8f1;
+            color: #173b25;
+        }
+
+        /* HERO */
+
+        .farm-hero {
+    min-height: 600px;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 45, 24, 0.45),
+            rgba(10, 45, 24, 0.45)
+        ),
+        url("images/photo,jpeg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px 20px;
+
+    position: relative;
+}
+
+        .farm-hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .farm-hero-content span {
+            font-size: 15px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .farm-hero h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            margin: 20px 0;
+            line-height: 1;
+        }
+
+        .farm-hero p {
+            font-size: 20px;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: auto;
+        }
+
+
+        /* MAIN CONTENT */
+
+        .farm-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .farm-story {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            color: #78a83f;
+            letter-spacing: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .farm-story h2 {
+            font-size: clamp(35px, 5vw, 60px);
+            margin: 15px 0 30px;
+            line-height: 1.1;
+        }
+
+        .farm-story h2 span {
+            color: #9acb65;
+        }
+
+        .farm-story-text {
+            max-width: 850px;
+        }
+
+        .farm-story-text p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #50665a;
+            margin-bottom: 25px;
+        }
+
+
+        /* FARM VALUES */
+
+        .farm-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 55px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        }
+
+        .value-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .value-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #66776c;
+            line-height: 1.7;
+        }
+
+
+        /* COLLABORATION */
+
+        .collaboration {
+            padding: 80px 0;
+        }
+
+        .collaboration-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .collaboration-header h2 {
+            font-size: clamp(35px, 5vw, 55px);
+            margin: 15px 0;
+        }
+
+        .collaboration-header p {
+            color: #607268;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* PHOTO GALLERY */
+
+        .farm-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 280px;
+            overflow: hidden;
+            border-radius: 18px;
+            position: relative;
+            background: #dfe7d9;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding: 25px 20px 18px;
+
+            color: white;
+            font-weight: bold;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.75)
+            );
+        }
+
+
+        /* VIDEO SECTION */
+
+        .video-section {
+            padding: 80px 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .video-card {
+            background: white;
+            padding: 12px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .video-card video {
+            width: 100%;
+            display: block;
+            border-radius: 14px;
+        }
+
+        .video-card h3 {
+            padding: 12px 10px 5px;
+        }
+
+
+        /* FARM JOURNEY */
+
+        .journey {
+            padding: 90px 0;
+        }
+
+        .journey-list {
+            max-width: 850px;
+            margin: 50px auto 0;
+        }
+
+        .journey-item {
+            display: flex;
+            gap: 25px;
+            padding: 25px 0;
+            border-bottom: 1px solid #dce3d8;
+        }
+
+        .journey-number {
+            min-width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+            background: #dceec8;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+            color: #286238;
+        }
+
+        .journey-item h3 {
+            margin: 0 0 8px;
+        }
+
+        .journey-item p {
+            margin: 0;
+            color: #66776c;
+            line-height: 1.7;
+        }
+
+
+        /* BACK BUTTON */
+
+        .back-home {
+            text-align: center;
+            padding: 30px 0 90px;
+        }
+
+        .back-home a {
+            display: inline-block;
+            background: #286238;
+            color: white;
+            padding: 15px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .back-home a:hover {
+            background: #1c4728;
+            transform: translateY(-3px);
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .farm-values {
+                grid-template-columns: 1fr;
+            }
+
+            .farm-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .farm-hero {
+                min-height: 60vh;
+            }
+        }
+    /* PHOTO HOVER ANIMATION */
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* VIDEO HOVER ANIMATION */
+
+.video-card {
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.video-card video {
+    transition: transform 0.5s ease;
+}
+
+.video-card:hover video {
+    transform: scale(1.02);
+}</style>
+</head>
+
+
+<body class="farm-page">
+
+
+    <!-- HERO -->
+
+    <section class="farm-hero">
+
+        <div class="farm-hero-content">
+
+            <span>Welcome to our farm</span>
+
+            <h1>Discover Sanjog Krishi Farm</h1>
+
+            <p>
+                From the soil we cultivate to the communities we serve,
+                discover the people, passion and purpose behind our farm.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FARM STORY -->
+
+    <section class="farm-story">
+
+        <div class="farm-container">
+
+            <span class="section-label">
+                Our Story
+            </span>
+
+            <h2>
+                Growing more than
+                <span>just crops.</span>
+            </h2>
+
+            <div class="farm-story-text">
+
+                <p>
+                    Sanjog Krishi Farm is a modern agricultural farm
+                    dedicated to producing fresh, healthy and locally
+                    grown products.
+                </p>
+
+                <p>
+                    Our farm combines traditional agricultural knowledge
+                    with modern farming practices to maintain the quality,
+                    freshness and natural value of every product we provide.
+                </p>
+
+                <p>
+                    We believe farming is not only about growing food.
+                    It is about creating opportunities for local farmers,
+                    supporting communities and building a healthier
+                    relationship between people and nature.
+                </p>
+
+            </div>
+
+
+            <!-- VALUES -->
+
+            <div class="farm-values">
+
+                <div class="value-card">
+
+                    <div class="value-icon">🌱</div>
+
+                    <h3>Sustainable Farming</h3>
+
+                    <p>
+                        We focus on responsible farming practices
+                        that respect nature and protect our environment.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">🥬</div>
+
+                    <h3>Fresh Products</h3>
+
+                    <p>
+                        Our goal is to provide fresh and healthy
+                        agricultural products directly from our farm.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">🤝</div>
+
+                    <h3>Community</h3>
+
+                    <p>
+                        We believe in working together with local
+                        farmers, customers and agricultural partners.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- COLLABORATION -->
+
+    <section class="collaboration">
+
+        <div class="farm-container">
+
+            <div class="collaboration-header">
+
+                <span class="section-label">
+                    Our Collaboration
+                </span>
+
+                <h2>
+                    Growing together,
+                    <span>stronger together.</span>
+                </h2>
+
+                <p>
+                    Sanjog Krishi Farm works with farmers, agricultural
+                    partners and local communities to promote better
+                    farming and create opportunities for sustainable
+                    agricultural development.
+                </p>
+
+            </div>
+
+
+            <!-- PHOTOS -->
+
+            <div class="farm-gallery">
+
+
+                <div class="gallery-item large">
+
+                    <img src="photo.jpeg"
+                         alt="Sanjog Krishi Farm collaboration">
+
+                    <div class="gallery-caption">
+                        Working together with local farmers
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img src="WhatsApp Image 2026-09-08 at 13.34.07.jpeg"
+                         alt="Farm collaboration">
+
+                    <div class="gallery-caption">
+                        Community farming
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img src="images/collaboration3.jpg"
+                         alt="Agricultural collaboration">
+
+                    <div class="gallery-caption">
+                        Sharing agricultural knowledge
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item large">
+
+                    <img src="images/collaboration4.jpg"
+                         alt="Sanjog Krishi Farm team">
+
+                    <div class="gallery-caption">
+                        Building a better agricultural future
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VIDEO -->
+
+    <section class="video-section">
+
+        <div class="farm-container">
+
+            <div class="collaboration-header">
+
+                <span class="section-label">
+                    Farm In Action
+                </span>
+
+                <h2>
+                    See our farm <span>in action.</span>
+                </h2>
+
+                <p>
+                    Here we add some collaboration videos of school 
+                    college..
+                </p>
+
+            </div>
+
+
+            <div class="video-grid">
+
+
+                <div class="video-card">
+
+                    <video controls poster="images/video-cover1.jpg">
+
+                        <source
+                            src="videos/farm-video1.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support video.
+                    </video>
+
+                    <h3>
+                        A Day at Sanjog Krishi Farm
+                    </h3>
+
+                </div>
+
+
+                <div class="video-card">
+
+                    <video controls poster="images/video-cover2.jpg">
+
+                        <source
+                            src="videos/farm-video2.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support video.
+                    </video>
+
+                    <h3>
+                        Our Farming Process
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FARM JOURNEY -->
+
+    <section class="journey">
+
+        <div class="farm-container">
+
+            <div class="collaboration-header">
+
+                <span class="section-label">
+                    Our Journey
+                </span>
+
+                <h2>
+                    From seed to
+                    <span>your table.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="journey-list">
+
+
+                <div class="journey-item">
+
+                    <div class="journey-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Preparing the Land
+                        </h3>
+
+                        <p>
+                            We carefully prepare our farmland
+                            for healthy and productive crops.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Growing With Care
+                        </h3>
+
+                        <p>
+                            Our crops are monitored throughout
+                            their growth to maintain quality.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Harvesting Fresh
+                        </h3>
+
+                        <p>
+                            Products are harvested carefully
+                            when they are ready.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="journey-item">
+
+                    <div class="journey-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            From Our Farm to You
+                        </h3>
+
+                        <p>
+                            Fresh agricultural products are
+                            prepared for customers and partners.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <div class="back-home">
+
+        <a href="index.html">
+            ← Back to Home
+        </a>
+
+    </div>
+
+
+</body>
+</html>
