@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SKF Shop | Sanjog Krishi Farm</title>
+
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="shop-header">
+<div class="logo-area">
+    <img src="logo.-removebg-preview.png" alt="Sanjog Krishi Farm Logo" class="farm-logo">
+
+    <div>
+        <h1>Sanjog Krishi Farm</h1>
+        <p>Where Nature Meets Freshness</p>
+    </div>
+</div>
+
+        <nav class="shop-navigation">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>
+            <a href="#vegetables">Vegetables</a>
+            <a href="#fruits">Fruits</a>
+            <a href="#farm-products">Farm Products</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="searchButton">🔍</button>
+
+            <button id="cartButton">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="shop-hero">
+
+        <div class="hero-content">
+
+            <span>🌱 FRESH FROM SKF FARM</span>
+
+            <h2>
+                Fresh Products.
+                <br>
+                Straight From Our Farm.
+            </h2>
+
+            <p>
+                Shop fresh vegetables, fruits and farm products
+                directly from Sanjog Krishi Farm.
+            </p>
+
+            <a href="#shop-products" class="hero-button">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="search-section" id="searchSection">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+    </section>
+
+
+    <!-- SHOP -->
+    <main id="shop-products">
+
+        <div class="section-heading">
+
+            <span>OUR PRODUCTS</span>
+
+            <h2>Fresh From Our Farm</h2>
+
+            <p>
+                Choose your favorite products and add them to your cart.
+            </p>
+
+        </div>
+
+
+        <!-- VEGETABLES -->
+        <section id="vegetables">
+
+            <h2 class="category-title">
+                🥬 Fresh Vegetables
+            </h2>
+
+            <div class="product-grid">
+
+                <div class="product-card" data-name="Tomato">
+
+                    <div class="product-image tomato">
+                        🍅
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Vegetable
+                        </span>
+
+                        <h3>Fresh Tomato</h3>
+
+                        <p>
+                            Fresh farm-grown tomatoes.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 120 / kg
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Tomato"
+                                data-price="120"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card" data-name="Potato">
+
+                    <div class="product-image potato">
+                        🥔
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Vegetable
+                        </span>
+
+                        <h3>Fresh Potato</h3>
+
+                        <p>
+                            Naturally grown fresh potatoes.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 100 / kg
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Potato"
+                                data-price="100"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card" data-name="Cauliflower">
+
+                    <div class="product-image cauliflower">
+                        🥦
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Vegetable
+                        </span>
+
+                        <h3>Cauliflower</h3>
+
+                        <p>
+                            Fresh and naturally grown.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 150 / kg
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Cauliflower"
+                                data-price="150"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card" data-name="Spinach">
+
+                    <div class="product-image spinach">
+                        🥬
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Vegetable
+                        </span>
+
+                        <h3>Fresh Spinach</h3>
+
+                        <p>
+                            Fresh leafy greens from our farm.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 80 / bundle
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Spinach"
+                                data-price="80"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FRUITS -->
+        <section id="fruits">
+
+            <h2 class="category-title">
+                🍓 Fresh Fruits
+            </h2>
+
+            <div class="product-grid">
+
+                <div class="product-card" data-name="Strawberry">
+
+                    <div class="product-image strawberry">
+                        🍓
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Fruit
+                        </span>
+
+                        <h3>Fresh Strawberry</h3>
+
+                        <p>
+                            Fresh farm-grown strawberries.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 450 / kg
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Strawberry"
+                                data-price="450"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card" data-name="Orange">
+
+                    <div class="product-image orange">
+                        🍊
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Fruit
+                        </span>
+
+                        <h3>Fresh Orange</h3>
+
+                        <p>
+                            Juicy and naturally grown oranges.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 180 / kg
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Orange"
+                                data-price="180"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card" data-name="Guava">
+
+                    <div class="product-image guava">
+                        🟢
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Fruit
+                        </span>
+
+                        <h3>Fresh Guava</h3>
+
+                        <p>
+                            Naturally grown farm guava.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 200 / kg
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Guava"
+                                data-price="200"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FARM PRODUCTS -->
+        <section id="farm-products">
+
+            <h2 class="category-title">
+                🍯 Farm Products
+            </h2>
+
+            <div class="product-grid">
+
+                <div class="product-card" data-name="Honey">
+
+                    <div class="product-image honey">
+                        🍯
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Farm Product
+                        </span>
+
+                        <h3>Fresh Farm Honey</h3>
+
+                        <p>
+                            Pure honey from our farm.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 850 / jar
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Fresh Farm Honey"
+                                data-price="850"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-card" data-name="Organic Herbs">
+
+                    <div class="product-image herbs">
+                        🌿
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Farm Product
+                        </span>
+
+                        <h3>Organic Herbs</h3>
+
+                        <p>
+                            Fresh organic herbs.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                Rs. 250 / pack
+                            </strong>
+
+                            <button
+                                class="add-cart"
+                                data-name="Organic Herbs"
+                                data-price="250"
+                            >
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CART PANEL -->
+    <aside id="cartPanel" class="cart-panel">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button id="closeCart">
+                ✕
+            </button>
+
+        </div>
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    Rs. 0
+                </strong>
+
+            </div>
+
+            <button id="checkoutButton">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CART OVERLAY -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>Sanjog Krishi Farm</h2>
+
+        <p>
+            Where Nature Meets Freshness
+        </p>
+
+        <p>
+            © 2026 Sanjog Krishi Farm. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="shop.js"></script>
+
+</body>
+</html>
