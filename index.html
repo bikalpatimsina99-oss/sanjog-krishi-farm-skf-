@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head> 
+<head>
     <head>
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        
+        <h1>My Fish Farm</h1>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +41,7 @@
     <!-- ================= HEADER ================= -->
 
     <header class="header">
+
 
         <div class="brand">
     <img src="logo.-removebg-preview.png" alt="Sanjog Krishi Farm Logo">
@@ -121,17 +126,17 @@
         </div>
 
         <div>
-            <strong>Local</strong>
+            <strong>LOCAL</strong>
             <span>Hasandaha Morang Farm</span>
         </div>
 
         <div>
-            <strong>7 Days</strong>
+            <strong>7 DAYS</strong>
             <span>Farm Availability</span>
         </div>
 
         <div>
-            <strong>Direct</strong>
+            <strong>DIRECT</strong>
             <span>Farm-to-Customer</span>
         </div>
 
@@ -158,8 +163,8 @@
             </span>
 
             <h2>
-                From our farm to
-                <em>your plate.</em>
+                Faram
+                <em>To your plate.</em>
             </h2>
 
             <p>
@@ -179,10 +184,11 @@
                 through fresh agricultural products while promoting
                 environmentally responsible farming.
             </p>
-
             <a href="farm.html" class="discover-btn">
     Discover Our Farm <span>→</span>
 </a>
+
+            
         </div>
 
     </section>
@@ -336,8 +342,6 @@
         </div>
 
     </section>
-    
-                     
     <!-- ================= FISH FARMING SECTION ================= -->
 <section id="fish-farming" class="fish-section">
 
@@ -375,38 +379,59 @@
 
 
     <!-- ================= FISH PHOTOS ================= -->
-    <div class="fish-media">
+    <div class="fish-gallery">
 
-        <h2>📸 Fish Farm Gallery</h2>
-
-        <div class="fish-gallery">
-
-            <div class="fish-photo">
-                <img src="fish.jpeg"
-                     alt="Fish at Sanjog Krishi Farm">
-                <h3>Our Fish Pond</h3>
-            </div>
-
-            <div class="fish-photo">
-                <img src="WhatsApp Image 2026-09-08 at 13.34.07.jpeg"
-                     alt="Fish farming at Sanjog Krishi Farm">
-                <h3>Fish Farming</h3>
-            </div>
-
-            <div class="fish-photo">
-                <img src="photo.jpeg" 
-                     alt="Fresh fish at Sanjog Krishi Farm">
-                <h3>Fresh Fish</h3>
-            </div>
-
+    <!-- PHOTO 1 -->
+    <div class="fish-photo-card" onclick="toggleFish(this)">
+        <div class="fish-image-box">
+            <img src="fish.jpeg" alt="Rohu Fish">
         </div>
 
+        <div class="fish-description">
+            <h3>Rohu Fish</h3>
+            <p>
+                Rohu is a popular freshwater fish commonly
+                raised in ponds and fish farms.
+            </p>
+        </div>
     </div>
 
 
-    
+    <!-- PHOTO 2 -->
+    <div class="fish-photo-card" onclick="toggleFish(this)">
+        <div class="fish-image-box">
+            <img src="WhatsApp Image 2026-09-08 at 13.34.07.jpeg" alt="Catla Fish">
+        </div>
 
-                <!-- FISH VIDEOS SECTION -->
+        <div class="fish-description">
+            <h3>Catla Fish</h3>
+            <p>
+                Catla is a freshwater fish that grows quickly
+                and is widely cultivated in fish farms.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- PHOTO 3 -->
+    <div class="fish-photo-card" onclick="toggleFish(this)">
+        <div class="fish-image-box">
+            <img src="photo.jpeg" alt="Fish Pond">
+        </div>
+
+        <div class="fish-description">
+            <h3>Our Fish Pond</h3>
+            <p>
+                Our fish pond provides a suitable environment
+                for healthy and sustainable fish farming.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- FISH VIDEOS SECTION -->
 <section class="fish-videos">
 
     <h2>Our Fish Farm</h2>
@@ -420,7 +445,7 @@
         <!-- Video 1 -->
         <div class="fish-video-card">
             <video controls playsinline preload="metadata">
-                <source src="WhatsApp Video 2026-09-08 at 13.34.05.mp4" type="video/mp4">
+                <source src="videos/WhatsApp Video 2026-09-08 at 13.34.05.mp4" type="video/mp4">
                 Your browser does not support the video.
             </video>
 
@@ -450,9 +475,6 @@
     </div>
 
 </section>
-
-
-
     <!-- ================= SERVICES ================= -->
 
     <section id="services" class="section services">
@@ -660,52 +682,62 @@
         </div>
 
     </section>
+    <section class="farm-gallery">
 
+    <div class="gallery-title">
+        <span>FROM THE FARM</span>
+        <h2>Life at Sanjog <b>Krishi Farm.</b></h2>
+    </div>
 
-    <!-- ================= GALLERY ================= -->
+    <!-- BOXES -->
+    <div class="farm-boxes" id="farmBoxes">
 
-    <section id="gallery" class="section gallery">
-
-        <div class="section-heading centered">
-
-            <span class="eyebrow">
-                FROM THE FARM
-            </span>
-
-            <h2>
-                Life at Sanjog
-                <em>Krishi Farm.</em>
-            </h2>
-
+        <div class="farm-box fresh-fields"
+             onclick="showFarmPhoto('fresh-fields')">
+            <div class="farm-emoji">🌱</div>
+            <h3>Fresh Fields</h3>
         </div>
 
-
-        <div class="gallery-grid">
-
-            <div class="gallery-item g1">
-                🌿
-                <span>Fresh Fields</span>
-            </div>
-
-            <div class="gallery-item g2">
-                🥬
-                <span>Daily Harvest</span>
-            </div>
-
-            <div class="gallery-item g3">
-                🍓
-                <span>Seasonal Fruits</span>
-            </div>
-
-            <div class="gallery-item g4">
-                🚜
-                <span>Farm Life</span>
-            </div>
-
+        <div class="farm-box daily-harvest"
+             onclick="showFarmPhoto('daily-harvest')">
+            <div class="farm-emoji">🍃</div>
+            <h3>Daily Harvest</h3>
         </div>
 
-    </section>
+        <div class="farm-box seasonal-fruits"
+             onclick="showFarmPhoto('seasonal-fruits')">
+            <div class="farm-emoji">🍓</div>
+            <h3>Seasonal Fruits</h3>
+        </div>
 
+        <div class="farm-box farm-life"
+             onclick="showFarmPhoto('farm-life')">
+            <div class="farm-emoji">🚜</div>
+            <h3>Farm Life</h3>
+        </div>
+
+    </div>
+
+
+    <!-- PHOTO DISPLAY -->
+    <div class="farm-photo-view" id="farmPhotoView">
+
+        <button class="back-gallery" onclick="backToGallery()">
+            ← Back to Gallery
+        </button>
+
+        <img id="farmDisplayImage" src="photo.jpeg" alt="Sanjog Krishi Farm">
+
+        <h2 id="farmPhotoTitle"></h2>
+
+        <p id="farmPhotoDescription"></p>
+
+    </div>
+
+</section>
+
+
+    
 
     <!-- ================= CONTACT ================= -->
 
@@ -733,10 +765,10 @@
 
         <div class="contact-card">
 
-            <a href="tel:+9779800962851">
+            <a href="tel:+9779800000000">
                 📞
                 <span>
-                    +977 9800962851
+                    +977 9800000000
                 </span>
             </a>
 
@@ -793,7 +825,22 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    
+<script>
+    const themeToggle = document.getElementById("themeToggle");
 
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            themeToggle.textContent = "☀️";
+        } else {
+            themeToggle.textContent = "🌙";
+        }
+
+    });
+</script>
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/9811028672"
    class="whatsapp-float"
