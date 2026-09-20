@@ -1,3 +1,27 @@
+/* Website text */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main title */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* Section titles */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+/* Card titles */
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
 /* =========================
    GENERAL
 ========================= */
@@ -18,7 +42,299 @@ body {
     background: #f7f8f1;
     line-height: 1.6;
 }
+/* =====================================
+   DARK MODE
+===================================== */
 
+/* Smooth transition */
+body,
+.fish-card,
+.fish-photo,
+.fish-video-card,
+header,
+footer {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* DARK MODE BUTTON */
+
+.theme-toggle {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #e8f5ee;
+    color: #123b2a;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.08);
+    background: #d1eddf;
+}
+/* =====================================
+   DARK MODE
+===================================== */
+
+/* Smooth transition */
+body,
+.fish-card,
+.fish-photo,
+.fish-video-card,
+header,
+footer {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* DARK MODE BUTTON */
+
+.theme-toggle {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #e8f5ee;
+    color: #123b2a;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.08);
+    background: #d1eddf;
+}
+
+
+/* =====================================
+   DARK THEME
+===================================== */
+
+body.dark-mode {
+    background: #0f1f19;
+    color: #eeeeee;
+}
+
+
+/* Headings */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #ffffff;
+}
+
+
+/* Paragraphs */
+
+body.dark-mode p {
+    color: #c5d0ca;
+}
+
+
+/* Cards */
+
+body.dark-mode .fish-card,
+body.dark-mode .fish-photo,
+body.dark-mode .fish-video-card {
+    background: #172a22;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Card headings */
+
+body.dark-mode .fish-card h3,
+body.dark-mode .fish-photo h3,
+body.dark-mode .fish-video-content h3 {
+    color: #ffffff;
+}
+
+
+/* Gallery text */
+
+body.dark-mode .fish-photo h3 {
+    color: #ffffff;
+}
+
+
+/* Video labels */
+
+body.dark-mode .fish-video-content .video-label {
+    background: #214b38;
+    color: #7ee2a9;
+}
+
+
+/* Links */
+
+body.dark-mode a {
+    color: #7ee2a9;
+}
+
+
+/* Header */
+
+body.dark-mode header {
+    background: #10251d;
+}
+
+
+/* Footer */
+
+body.dark-mode footer {
+    background: #091610;
+    color: #d8e4dd;
+}
+
+
+/* Dark mode button */
+
+body.dark-mode .theme-toggle {
+    background: #263d32;
+    color: #ffd966;
+}
+
+
+/* Hover cards */
+
+body.dark-mode .fish-card:hover,
+body.dark-mode .fish-photo:hover,
+body.dark-mode .fish-video-card:hover {
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+}
+/* =================================
+   FLOATING DARK MODE BUTTON
+================================= */
+
+.theme-toggle {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #123b2a;
+
+    font-size: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.theme-toggle:hover {
+    transform: scale(1.12) rotate(10deg);
+
+    box-shadow:
+        0 8px 25px rgba(13, 104, 71, 0.35);
+}
+
+
+/* Click */
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+
+/* =================================
+   DARK MODE BUTTON
+================================= */
+
+body.dark-mode .theme-toggle {
+    background: #1c352a;
+    color: #ffd966;
+
+    border-color: rgba(255, 217, 102, 0.35);
+
+    box-shadow:
+        0 0 15px rgba(255, 217, 102, 0.25),
+        0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Dark mode hover */
+
+body.dark-mode .theme-toggle:hover {
+    transform: scale(1.12) rotate(-10deg);
+
+    box-shadow:
+        0 0 25px rgba(255, 217, 102, 0.4),
+        0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .theme-toggle {
+        width: 46px;
+        height: 46px;
+
+        right: 18px;
+        bottom: 18px;
+
+        font-size: 20px;
+    }
+
+}
 
 /* =========================
    HEADER
@@ -622,62 +938,6 @@ h2 em {
 
     margin-bottom: 27px;
 }
-/* =========================
-   FARM BANNER
-========================= */
-
-.farm-banner {
-
-    min-height: 530px;
-
-    display: flex;
-
-    align-items: center;
-
-    color: white;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(15, 44, 22, 0.91),
-            rgba(18, 54, 25, 0.58)
-        ),
-
-        url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1800&q=85")
-
-        center / cover;
-}
-
-
-.farm-banner > div {
-
-    width: min(1120px, 88%);
-
-    margin: auto;
-}
-
-
-.farm-banner h2 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 58px;
-
-    line-height: 1.05;
-
-    margin: 14px 0;
-}
-
-
-.farm-banner p {
-
-    max-width: 470px;
-
-    color: #d9e5d6;
-
-    margin-bottom: 27px;
-}
 /* ================= FISH FARMING ================= */
 
 .fish-section {
@@ -1020,8 +1280,6 @@ h2 em {
     }
 
 }
-
-
 
 /* =========================
    SERVICES
@@ -1562,7 +1820,104 @@ footer small {
 
         font-size: 40px;
     }
-}.whatsapp-float {
+}
+/* ================= FISH GALLERY ================= */
+
+.fish-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+
+/* EACH PHOTO CARD */
+
+.fish-photo-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: box-shadow 0.4s ease;
+}
+
+.fish-photo-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* PHOTO */
+
+.fish-image-box {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+
+    transition: transform 0.6s ease;
+}
+
+.fish-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* DESCRIPTION */
+
+.fish-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    padding: 0 25px;
+
+    transform: translateY(-30px);
+
+    transition:
+        max-height 0.6s ease,
+        opacity 0.5s ease,
+        transform 0.6s ease,
+        padding 0.6s ease;
+}
+
+.fish-description h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.fish-description p {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* WHEN PHOTO IS CLICKED */
+
+.fish-photo-card.active .fish-image-box {
+    transform: translateY(-25px);
+}
+
+.fish-photo-card.active .fish-image-box img {
+    transform: scale(1.05);
+}
+
+.fish-photo-card.active .fish-description {
+    max-height: 250px;
+    opacity: 1;
+
+    transform: translateY(0);
+
+    padding: 0 25px 25px;
+}
+
+.whatsapp-float {
     position: fixed;
     right: 25px;
     top: 50%;
@@ -1610,7 +1965,463 @@ footer small {
 
     100% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }/* DISCOVER OUR FARM BUTTON */
+    }
+}/* =================================
+   FARM GALLERY
+================================= */
+
+.farm-gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+}
+
+/* TITLE */
+
+.gallery-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-title span {
+    color: #8bbf62;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.gallery-title h2 {
+    margin-top: 18px;
+    font-size: 46px;
+    color: #183d27;
+}
+
+.gallery-title h2 b {
+    color: #a5d36d;
+}
+
+
+/* =================================
+   BOXES
+================================= */
+
+.farm-boxes {
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+
+    gap: 12px;
+
+    transition: 0.5s ease;
+}
+
+.farm-box {
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    color: white;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.farm-box:hover {
+    transform: scale(1.03);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.farm-box h3 {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    margin-top: 15px;
+}
+
+.farm-emoji {
+    font-size: 45px;
+}
+
+
+/* BIG BOX */
+
+.fresh-fields {
+    grid-row: span 2;
+
+    background: linear-gradient(
+        135deg,
+        #9abb78,
+        #416c42
+    );
+}
+
+
+/* OTHER BOXES */
+
+.daily-harvest {
+    background: linear-gradient(
+        135deg,
+        #b8d18e,
+        #71974f
+    );
+}
+
+.seasonal-fruits {
+    background: linear-gradient(
+        135deg,
+        #e8b887,
+        #ad744d
+    );
+}
+
+.farm-life {
+    background: linear-gradient(
+        135deg,
+        #b4c49f,
+        #657c62
+    );
+}
+
+
+/* =================================
+   PHOTO VIEW
+================================= */
+
+.farm-photo-view {
+    display: none;
+
+    text-align: center;
+
+    animation: photoAppear 0.6s ease;
+}
+
+
+/* SHOW PHOTO */
+
+.farm-photo-view.active {
+    display: block;
+}
+
+.farm-photo-view img {
+    width: 100%;
+
+    max-width: 900px;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.2);
+
+    margin-top: 20px;
+}
+
+
+/* PHOTO TITLE */
+
+.farm-photo-view h2 {
+    color: #183d27;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    margin: 25px 0 10px;
+}
+
+
+/* DESCRIPTION */
+
+.farm-photo-view p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* BACK BUTTON */
+
+.back-gallery {
+    border: none;
+
+    background: #8fbe63;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.back-gallery:hover {
+    background: #6d9d47;
+
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   ANIMATION
+================================= */
+
+@keyframes photoAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-title h2 {
+        font-size: 34px;
+    }
+
+    .farm-boxes {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+    }
+
+    .farm-box {
+        min-height: 200px;
+    }
+
+    .fresh-fields {
+        grid-row: auto;
+    }
+
+    .farm-photo-view img {
+        height: 350px;
+    }
+}/* =================================
+   FARM MEDIA PAGE
+================================= */
+
+.media-page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 40px 25px 80px;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #8fbe63;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #6f9f49;
+
+    transform: translateX(-4px);
+}
+
+
+/* HEADING */
+
+.media-heading {
+    text-align: center;
+
+    margin: 45px 0;
+}
+
+.media-heading span {
+    color: #8fbe63;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.media-heading h1 {
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    color: #183d27;
+
+    margin: 15px 0;
+}
+
+.media-heading h1 b {
+    color: #a5d36d;
+}
+
+.media-heading p {
+    color: #666;
+
+    font-size: 18px;
+}
+
+
+/* MEDIA GRID */
+
+.media-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* MEDIA CARD */
+
+.media-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+}
+
+.media-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.16);
+}
+
+
+/* PHOTOS */
+
+.media-card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* VIDEOS */
+
+.media-card video {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* CARD TITLE */
+
+.media-card h3 {
+
+    padding: 18px;
+
+    margin: 0;
+
+    color: #183d27;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .media-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .media-heading h1 {
+
+        font-size: 40px;
+
+    }
+
+    .media-card img,
+    .media-card video {
+
+        height: 250px;
+
+    }
+
+}/* DISCOVER OUR FARM BUTTON */
 
 .discover-btn {
     display: inline-flex;
@@ -1637,6 +2448,24 @@ footer small {
 
 .discover-btn:hover span {
     transform: translateX(8px);
+}/* FARM BRAND / LOGO */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    color: #123c2a;
+    font-weight: 400;
+}
+
+.brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.brand strong {
+    font-weight: 700;
 }/* ============================= */
 /* FISH VIDEO SECTION */
 /* ============================= */
