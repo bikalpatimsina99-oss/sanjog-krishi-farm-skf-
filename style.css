@@ -1556,269 +1556,375 @@ h2 em {
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
 
-.contact {
+.contact-section {
+    position: relative;
+    min-height: 520px;
 
-    background: #1e4529;
+    background: #194b2b;
 
-    color: white;
+    overflow: hidden;
+    isolation: isolate;
+}
 
-    padding: 90px 6%;
+
+/* =====================================================
+   FLOATING LINES BACKGROUND
+===================================================== */
+
+#floating-lines {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: auto;
+
+    opacity: 0.28;
+}
+
+
+/* Make canvas fill the area */
+
+#floating-lines canvas {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block;
+}
+
+
+/* =====================================================
+   CONTACT CONTENT
+===================================================== */
+
+.contact-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1320px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    min-height: 520px;
 
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
+    align-items: center;
+
     gap: 80px;
 
-    align-items: center;
+    padding: 70px 0;
 }
 
 
-.contact h2 {
+/* =====================================================
+   LEFT SIDE
+===================================================== */
 
-    font-size: 54px;
+.contact-left {
+    max-width: 650px;
 }
 
 
-.contact > div > p {
+.contact-label {
+    color: #8ebf49;
 
-    color: #cfddce;
+    font-size: 14px;
 
-    max-width: 490px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
 }
 
+
+.contact-left h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(48px, 5vw, 70px);
+
+    line-height: 1.02;
+
+    font-weight: 700;
+}
+
+
+.contact-left h2 span {
+    display: block;
+
+    color: #a9d36b;
+}
+
+
+.contact-left p {
+    margin-top: 35px;
+
+    max-width: 620px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 19px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   CONTACT CARD
+===================================================== */
 
 .contact-card {
+    position: relative;
 
-    display: grid;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 35px 40px;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(3px);
+
+    -webkit-backdrop-filter: blur(3px);
+}
+
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
 
     gap: 20px;
 
-    background: rgba(255,255,255,0.07);
+    color: #ffffff;
 
-    padding: 30px;
+    font-size: 17px;
 
-    border: 1px solid rgba(255,255,255,0.12);
+    line-height: 1.5;
 
-    border-radius: 7px;
+    margin-bottom: 26px;
 }
 
 
-.contact-card a,
-.contact-card div {
+.contact-item:last-child {
+    margin-bottom: 0;
+}
 
-    color: #e8f1e5;
+
+.contact-item a {
+    color: #ffffff;
 
     text-decoration: none;
 
-    display: flex;
-
-    gap: 14px;
-
-    align-items: flex-start;
-
-    font-size: 14px;
+    transition: color 0.25s ease;
 }
 
 
-.contact-card a:hover {
-
-    color: #b9d78f;
+.contact-item a:hover {
+    color: #a9d36b;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* =====================================================
+   CONTACT ICONS
+===================================================== */
 
-footer {
+.contact-icon {
+    width: 22px;
 
-    background: #122b19;
+    min-width: 22px;
 
-    color: #9caf9e;
-
-    padding: 30px 6%;
-
-    display: flex;
-
-    justify-content: space-between;
+    display: inline-flex;
 
     align-items: center;
 
-    font-size: 12px;
+    justify-content: center;
+
+    font-size: 19px;
 }
 
 
-footer .logo {
-
-    color: white;
+.phone-icon {
+    color: #ff3b9d;
 }
 
 
-footer p {
+.email-icon {
+    color: #ffffff;
+}
+
+
+.location-icon {
+    font-size: 17px;
+}
+
+
+.opening-hours {
+    align-items: flex-start;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    min-height: 115px;
+
+    background: #092b18;
+
+    color: #ffffff;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 0 7%;
+
+    box-sizing: border-box;
+}
+
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 20px;
+}
+
+
+.footer-logo {
+    font-size: 18px;
+
+    font-weight: 800;
+
+    color: #a9d36b;
+}
+
+
+.footer-tagline {
+    text-align: center;
+
+    color: #8bb89c;
+
+    font-size: 15px;
 
     font-style: italic;
 }
 
 
-footer small {
+.footer-copyright {
+    text-align: right;
 
-    opacity: 0.7;
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 13px;
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
-    .header nav {
-
-        display: none;
-
-        position: absolute;
-
-        top: 76px;
-
-        left: 0;
-
-        right: 0;
-
-        background: #fbfcf7;
-
-        padding: 20px 7%;
-
-        flex-direction: column;
-
-        gap: 15px;
-
-        border-bottom: 1px solid #e5eadc;
-    }
-
-
-    .header nav.open {
-
-        display: flex;
-    }
-
-
-    .menu {
-
-        display: block;
-    }
-
-
-    .hero {
-
-        min-height: 640px;
-    }
-
-
-    .trust {
-
-        flex-direction: column;
-
-        gap: 7px;
-    }
-
-
-    .stats {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .about,
-    .contact {
-
+    .contact-content {
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 45px;
+
+        width: min(90%, 500px);
+
+        padding: 65px 0;
     }
 
 
-    .about-image {
-
-        height: 360px;
+    .contact-section {
+        min-height: auto;
     }
 
 
-    .section {
-
-        padding: 75px 0;
+    .contact-content {
+        min-height: auto;
     }
 
 
-    .section-heading {
-
-        display: block;
+    .contact-left h2 {
+        font-size: 48px;
     }
 
 
-    .section-heading > p {
-
-        margin-top: 12px;
+    .contact-card {
+        padding: 30px 25px;
     }
 
 
-    .product-grid,
-    .service-grid {
-
+    .site-footer {
         grid-template-columns: 1fr;
-    }
-
-
-    .why-grid {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-    .gallery-grid {
-
-        grid-template-columns: 1fr 1fr;
-
-        grid-template-rows: 180px 180px;
-    }
-
-
-    .g1 {
-
-        grid-row: span 1;
-    }
-
-
-    .farm-banner h2 {
-
-        font-size: 44px;
-    }
-
-
-    .contact {
-
-        padding: 70px 6%;
-    }
-
-
-    footer {
-
-        flex-direction: column;
-
-        gap: 10px;
 
         text-align: center;
+
+        padding: 30px 20px;
+
+        gap: 20px;
     }
 
 
-    .section-copy h2,
-    .section-heading h2 {
+    .footer-brand {
+        justify-content: center;
+    }
 
+
+    .footer-tagline,
+    .footer-copyright {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-left h2 {
         font-size: 40px;
+    }
+
+
+    .contact-left p {
+        font-size: 16px;
+    }
+
+
+    .contact-item {
+        font-size: 15px;
+
+        gap: 12px;
     }
 }
 /* ================= FISH GALLERY ================= */
@@ -2550,4 +2656,1775 @@ footer small {
         height: auto;
         min-height: 250px;
     }
+}/* =========================================================
+   SANJOG KRISHI FARM — NEW VISUAL SYSTEM
+   ========================================================= */
+
+:root {
+  --skf-green: #173f2a;
+  --skf-leaf: #4f8a3d;
+  --skf-earth: #8a6846;
+  --skf-cream: #f5f1e6;
+  --skf-white: #fcfcf8;
+  --skf-gold: #d4a84f;
+
+  --skf-text: #193126;
+  --skf-muted: #647268;
+
+  --skf-display: "DM Serif Display", Georgia, serif;
+  --skf-body: "Manrope", Arial, sans-serif;
+
+  --skf-max: 1320px;
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.skf-hero,
+.skf-discover,
+.skf-produce,
+.skf-story,
+.skf-life,
+.skf-contact {
+  font-family: var(--skf-body);
+}
+
+.skf-hero *,
+.skf-discover *,
+.skf-produce *,
+.skf-story *,
+.skf-life *,
+.skf-contact * {
+  box-sizing: border-box;
+}
+
+.skf-hero img,
+.skf-discover img,
+.skf-produce img,
+.skf-story img,
+.skf-life img {
+  display: block;
+  width: 100%;
+}
+
+.skf-hero a,
+.skf-discover a,
+.skf-produce a,
+.skf-story a,
+.skf-life a,
+.skf-contact a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.skf-hero {
+  position: relative;
+  min-height: min(820px, 92vh);
+  overflow: hidden;
+  background: var(--skf-green);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.skf-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.skf-hero-media img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.skf-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 37, 24, 0.90) 0%,
+      rgba(10, 37, 24, 0.67) 38%,
+      rgba(10, 37, 24, 0.18) 78%,
+      rgba(10, 37, 24, 0.05) 100%
+    );
+}
+
+.skf-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(var(--skf-max), calc(100% - 48px));
+  margin: 0 auto;
+
+  padding: 120px 0 100px;
+}
+
+.skf-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 38px;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.skf-hero-logo {
+  width: 58px !important;
+  height: 58px;
+
+  border-radius: 50%;
+}
+
+.skf-hero h1 {
+  max-width: 760px;
+
+  margin: 0 0 28px;
+
+  font-family: var(--skf-display);
+  font-size: clamp(54px, 7vw, 96px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.skf-hero p {
+  max-width: 580px;
+
+  margin: 0 0 38px;
+
+  color: rgba(255,255,255,0.84);
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.skf-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.skf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+  padding: 0 25px;
+
+  border-radius: 3px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 220ms ease,
+    background 220ms ease;
+}
+
+.skf-button:hover {
+  transform: translateY(-2px);
+}
+
+.skf-button-light {
+  background: var(--skf-white);
+  color: var(--skf-green);
+}
+
+.skf-button-green {
+  background: var(--skf-green);
+  color: white;
+}
+
+.skf-text-link {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border-bottom: 1px solid rgba(255,255,255,.65);
+
+  padding-bottom: 5px;
+}
+
+.skf-scroll-indicator {
+  position: absolute;
+  z-index: 3;
+
+  right: 45px;
+  bottom: 36px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.skf-scroll-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 50%;
+
+  animation: skfFloat 2.2s ease-in-out infinite;
+}
+
+@keyframes skfFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+/* =========================================================
+   SECTION COMMON
+   ========================================================= */
+
+.skf-section-label {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: var(--skf-leaf);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.skf-discover h2,
+.skf-produce h2,
+.skf-story h2,
+.skf-life h2,
+.skf-contact h2 {
+  margin: 0;
+
+  font-family: var(--skf-display);
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   DISCOVER
+   ========================================================= */
+
+.skf-discover {
+  background: var(--skf-cream);
+
+  padding: 130px 24px;
+}
+
+.skf-discover-intro {
+  width: min(var(--skf-max), 100%);
+  margin: 0 auto 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.skf-discover h2 {
+  font-size: clamp(48px, 6vw, 78px);
+  color: var(--skf-green);
+}
+
+.skf-discover-intro p {
+  max-width: 440px;
+
+  margin: 55px 0 0;
+
+  color: var(--skf-muted);
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.skf-farm-map {
+  position: relative;
+
+  width: min(var(--skf-max), 100%);
+  margin: auto;
+}
+
+.skf-farm-image {
+  height: 650px;
+  overflow: hidden;
+}
+
+.skf-farm-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.skf-farm-point {
+  position: absolute;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  max-width: 230px;
+
+  padding: 15px;
+
+  background: rgba(252,252,248,.94);
+}
+
+.skf-point-dot {
+  flex: 0 0 auto;
+
+  width: 12px;
+  height: 12px;
+
+  margin-top: 5px;
+
+  border-radius: 50%;
+
+  background: var(--skf-leaf);
+
+  box-shadow: 0 0 0 5px rgba(79,138,61,.15);
+}
+
+.skf-farm-point strong {
+  color: var(--skf-green);
+
+  font-size: 14px;
+}
+
+.skf-farm-point p {
+  margin: 5px 0 0;
+
+  color: var(--skf-muted);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.skf-point-crops {
+  left: 6%;
+  top: 12%;
+}
+
+.skf-point-fish {
+  right: 7%;
+  top: 42%;
+}
+
+.skf-point-life {
+  left: 14%;
+  bottom: 10%;
+}
+
+
+/* =========================================================
+   PRODUCE
+   ========================================================= */
+
+.skf-produce {
+  background: var(--skf-white);
+
+  padding: 130px 24px;
+}
+
+.skf-section-heading {
+  width: min(var(--skf-max), 100%);
+  margin: 0 auto 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+
+.skf-produce h2 {
+  font-size: clamp(48px, 6vw, 76px);
+  color: var(--skf-green);
+}
+
+.skf-section-heading > p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--skf-muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.skf-produce-grid {
+  width: min(var(--skf-max), 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 28px;
+}
+
+.skf-produce-item {
+  overflow: hidden;
+
+  background: var(--skf-cream);
+}
+
+.skf-produce-large {
+  grid-row: span 2;
+}
+
+.skf-produce-image {
+  overflow: hidden;
+}
+
+.skf-produce-large .skf-produce-image {
+  height: 590px;
+}
+
+.skf-produce-item:not(.skf-produce-large) .skf-produce-image {
+  height: 280px;
+}
+
+.skf-produce-image img {
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 700ms cubic-bezier(.2,.7,.2,1);
+}
+
+.skf-produce-item:hover .skf-produce-image img {
+  transform: scale(1.04);
+}
+
+.skf-produce-info {
+  padding: 28px 30px 32px;
+}
+
+.skf-produce-info h3 {
+  margin: 0 0 10px;
+
+  color: var(--skf-green);
+
+  font-family: var(--skf-display);
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.skf-produce-info p {
+  max-width: 470px;
+
+  margin: 0 0 18px;
+
+  color: var(--skf-muted);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.skf-produce-info span {
+  color: var(--skf-earth);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FARM STORY
+   ========================================================= */
+
+.skf-story {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+
+  background: var(--skf-green);
+  color: white;
+}
+
+.skf-story-image {
+  min-height: 700px;
+}
+
+.skf-story-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.skf-story-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 90px clamp(40px, 7vw, 110px);
+}
+
+.skf-story-content .skf-section-label {
+  color: var(--skf-gold);
+}
+
+.skf-story h2 {
+  font-size: clamp(48px, 5vw, 72px);
+}
+
+.skf-story-content p {
+  max-width: 510px;
+
+  margin: 28px 0 0;
+
+  color: rgba(255,255,255,.72);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.skf-outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  min-height: 50px;
+  padding: 0 23px;
+
+  margin-top: 35px;
+
+  border: 1px solid currentColor;
+
+  color: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background 220ms ease,
+    color 220ms ease;
+}
+
+.skf-outline-button:hover {
+  background: white;
+  color: var(--skf-green);
+}
+
+
+/* =========================================================
+   LIFE AT SKF
+   ========================================================= */
+
+.skf-life {
+  background: var(--skf-cream);
+
+  padding: 130px 24px;
+}
+
+.skf-life-heading {
+  width: min(var(--skf-max), 100%);
+  margin: 0 auto 65px;
+}
+
+.skf-life h2 {
+  color: var(--skf-green);
+  font-size: clamp(48px, 6vw, 76px);
+}
+
+.skf-life-grid {
+  width: min(var(--skf-max), 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 260px;
+
+  gap: 18px;
+}
+
+.skf-life-card {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--skf-green);
+}
+
+.skf-life-card img {
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 700ms cubic-bezier(.2,.7,.2,1);
+}
+
+.skf-life-card:hover img {
+  transform: scale(1.05);
+}
+
+.skf-life-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.58),
+    transparent 55%
+  );
+}
+
+.skf-life-card span {
+  position: absolute;
+  z-index: 2;
+
+  left: 24px;
+  bottom: 22px;
+
+  color: white;
+
+  font-family: var(--skf-display);
+  font-size: 28px;
+}
+
+.skf-life-tall {
+  grid-row: span 2;
+}
+
+.skf-life-wide {
+  grid-column: span 2;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.skf-contact {
+  padding: 150px 24px;
+
+  background: var(--skf-white);
+
+  text-align: center;
+}
+
+.skf-contact-inner {
+  width: min(800px, 100%);
+  margin: auto;
+}
+
+.skf-contact .skf-section-label {
+  color: var(--skf-earth);
+}
+
+.skf-contact h2 {
+  color: var(--skf-green);
+
+  font-size: clamp(54px, 7vw, 90px);
+}
+
+.skf-contact p {
+  max-width: 520px;
+
+  margin: 28px auto 0;
+
+  color: var(--skf-muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.skf-contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  margin-top: 38px;
+}
+
+.skf-contact .skf-outline-button {
+  color: var(--skf-green);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.skf-hero a:focus-visible,
+.skf-contact a:focus-visible,
+.skf-story a:focus-visible {
+  outline: 3px solid var(--skf-gold);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skf-scroll-arrow,
+  .skf-produce-image img,
+  .skf-life-card img,
+  .skf-button {
+    animation: none;
+    transition: none;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .skf-discover-intro,
+  .skf-section-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .skf-discover-intro p {
+    margin-top: 0;
+  }
+
+  .skf-produce-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skf-produce-large {
+    grid-row: auto;
+  }
+
+  .skf-produce-large .skf-produce-image {
+    height: 480px;
+  }
+
+  .skf-story {
+    grid-template-columns: 1fr;
+  }
+
+  .skf-story-image {
+    min-height: 500px;
+  }
+
+  .skf-life-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skf-life-wide {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .skf-hero {
+    min-height: 760px;
+  }
+
+  .skf-hero-content {
+    width: calc(100% - 34px);
+    padding: 110px 0 90px;
+  }
+
+  .skf-brand-lockup {
+    margin-bottom: 28px;
+  }
+
+  .skf-hero-logo {
+    width: 48px !important;
+    height: 48px;
+  }
+
+  .skf-hero h1 {
+    font-size: 54px;
+    letter-spacing: -1.5px;
+  }
+
+  .skf-hero p {
+    font-size: 15px;
+  }
+
+  .skf-scroll-indicator {
+    right: 20px;
+    bottom: 24px;
+  }
+
+  .skf-discover,
+  .skf-produce,
+  .skf-life {
+    padding: 90px 18px;
+  }
+
+  .skf-farm-image {
+    height: 480px;
+  }
+
+  .skf-farm-point {
+    max-width: 175px;
+    padding: 11px;
+  }
+
+  .skf-farm-point p {
+    display: none;
+  }
+
+  .skf-point-crops {
+    left: 4%;
+    top: 8%;
+  }
+
+  .skf-point-fish {
+    right: 4%;
+    top: 44%;
+  }
+
+  .skf-point-life {
+    left: 5%;
+    bottom: 8%;
+  }
+
+  .skf-produce-large .skf-produce-image {
+    height: 380px;
+  }
+
+  .skf-produce-item:not(.skf-produce-large) .skf-produce-image {
+    height: 250px;
+  }
+
+  .skf-story-image {
+    min-height: 380px;
+  }
+
+  .skf-story-content {
+    padding: 75px 25px;
+  }
+
+  .skf-life-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+
+  .skf-life-tall,
+  .skf-life-wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .skf-contact {
+    padding: 100px 20px;
+  }
+
+  .skf-contact h2 {
+    font-size: 54px;
+  }
+
+}/* SKF subtle reveal */
+
+.skf-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms cubic-bezier(.2,.7,.2,1);
+}
+
+.skf-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skf-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+}/* =========================================
+   SKF SMOOTH SCROLL
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+
+/* =========================================
+   SECTION REVEAL ANIMATION
+   ========================================= */
+
+.skf-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skf-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Slightly different reveal for images */
+
+.skf-reveal-image {
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skf-reveal-image.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* =========================================
+   HERO LOAD ANIMATION
+   ========================================= */
+
+.skf-hero-content {
+  animation: skfHeroIn 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes skfHeroIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .skf-reveal,
+  .skf-reveal-image,
+  .skf-hero-content {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+}/* =========================================================
+   SKF 3D CONTACT EXPERIENCE
+   ========================================================= */
+
+.skf-contact-3d {
+
+  position: relative;
+
+  min-height: 850px;
+
+  padding: 150px 25px 100px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(83, 139, 76, 0.08),
+      transparent 30%
+    ),
+    #f7f5ed;
+
+  color: #173f2a;
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.skf-contact-inner {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: min(1100px, 100%);
+
+  margin: auto;
+
+  text-align: center;
+
+}
+
+
+.skf-contact-eyebrow {
+
+  margin-bottom: 25px;
+
+  color: #9a6c35;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+
+.skf-contact-3d h2 {
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  color: #16452e;
+
+  font-family:
+    "DM Serif Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    55px,
+    8vw,
+    108px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.94;
+
+  letter-spacing: -3px;
+
+}
+
+
+.skf-contact-description {
+
+  max-width: 600px;
+
+  margin: 40px auto 0;
+
+  color: #65746b;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.skf-contact-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 42px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.skf-contact-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 55px;
+
+  padding: 0 27px;
+
+  border: 1px solid #173f2a;
+
+  border-radius: 3px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+
+}
+
+
+.skf-contact-button:hover {
+
+  transform: translateY(-4px);
+
+}
+
+
+.skf-contact-primary {
+
+  color: white;
+
+  background: #173f2a;
+
+  box-shadow:
+    0 10px 25px rgba(23,63,42,.16);
+
+}
+
+
+.skf-contact-primary:hover {
+
+  background: #285b3d;
+
+  box-shadow:
+    0 15px 35px rgba(23,63,42,.22);
+
+}
+
+
+.skf-contact-whatsapp {
+
+  color: #173f2a;
+
+  background: transparent;
+
+}
+
+
+.skf-contact-whatsapp:hover {
+
+  background: #173f2a;
+
+  color: white;
+
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.skf-contact-details {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 1px;
+
+  width: min(900px, 100%);
+
+  margin: 100px auto 0;
+
+  border-top: 1px solid rgba(23,63,42,.15);
+
+  border-bottom: 1px solid rgba(23,63,42,.15);
+
+}
+
+
+.skf-contact-detail {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 28px 20px;
+
+  text-align: left;
+
+}
+
+
+.skf-detail-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 35px;
+
+  height: 35px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(23,63,42,.25);
+
+  border-radius: 50%;
+
+  color: #4f8a3d;
+
+  font-size: 17px;
+
+}
+
+
+.skf-contact-detail div {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+.skf-detail-label {
+
+  margin-bottom: 5px;
+
+  color: #8a6846;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+}
+
+
+.skf-contact-detail strong {
+
+  color: #173f2a;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+}
+
+
+.skf-contact-detail small {
+
+  margin-top: 3px;
+
+  color: #78847d;
+
+  font-size: 11px;
+
+}
+
+
+/* =========================================================
+   LOCATION STRIP
+   ========================================================= */
+
+.skf-location-strip {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: min(900px, 100%);
+
+  margin: 45px auto 0;
+
+  padding: 22px 25px;
+
+  border: 1px solid rgba(23,63,42,.15);
+
+  background: rgba(255,255,255,.55);
+
+  text-align: left;
+
+}
+
+
+.skf-location-strip div {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+.skf-location-strip span {
+
+  color: #8a6846;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+}
+
+
+.skf-location-strip strong {
+
+  margin-top: 4px;
+
+  color: #173f2a;
+
+  font-size: 14px;
+
+}
+
+
+.skf-location-strip a {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #173f2a;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+}
+
+
+.skf-location-strip a span {
+
+  color: #4f8a3d;
+
+  font-size: 16px;
+
+}
+
+
+/* =========================================================
+   3D FLOATING FARM SEED
+   ========================================================= */
+
+.skf-contact-orbit {
+
+  position: absolute;
+
+  top: 105px;
+
+  right: 7%;
+
+  width: 190px;
+
+  height: 190px;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+}
+
+
+/* OUTER RINGS */
+
+.skf-contact-orbit-ring {
+
+  position: absolute;
+
+  inset: 0;
+
+  border: 1px solid rgba(79,138,61,.15);
+
+  border-radius: 50%;
+
+}
+
+
+.ring-one {
+
+  transform:
+    rotateX(65deg)
+    rotateZ(20deg);
+
+  animation:
+    skfOrbitOne 10s linear infinite;
+}
+
+
+.ring-two {
+
+  transform:
+    rotateY(65deg)
+    rotateZ(-20deg);
+
+  animation:
+    skfOrbitTwo 13s linear infinite reverse;
+}
+
+
+@keyframes skfOrbitOne {
+
+  from {
+    transform:
+      rotateX(65deg)
+      rotateZ(0deg);
+  }
+
+  to {
+    transform:
+      rotateX(65deg)
+      rotateZ(360deg);
+  }
+
+}
+
+
+@keyframes skfOrbitTwo {
+
+  from {
+    transform:
+      rotateY(65deg)
+      rotateZ(0deg);
+  }
+
+  to {
+    transform:
+      rotateY(65deg)
+      rotateZ(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   CENTRAL 3D OBJECT
+   ========================================================= */
+
+.skf-contact-seed {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 85px;
+
+  height: 105px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-25deg);
+
+  border-radius:
+    65% 35%
+    65% 35%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #66d47a 0%,
+      #2e9d51 45%,
+      #126236 100%
+    );
+
+  box-shadow:
+
+    inset -10px -12px 20px
+      rgba(0,0,0,.18),
+
+    inset 8px 8px 16px
+      rgba(255,255,255,.25),
+
+    0 25px 45px
+      rgba(23,63,42,.18);
+
+  animation:
+    skfSeedFloat 4s ease-in-out infinite;
+
+}
+
+
+@keyframes skfSeedFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translate(-50%, -50%)
+      rotate(-25deg)
+      translateY(0);
+
+  }
+
+  50% {
+
+    transform:
+      translate(-50%, -50%)
+      rotate(-21deg)
+      translateY(-12px);
+
+  }
+
+}
+
+
+/* =========================================================
+   SEED HIGHLIGHT
+   ========================================================= */
+
+.skf-seed-highlight {
+
+  position: absolute;
+
+  top: 17px;
+
+  left: 20px;
+
+  width: 22px;
+
+  height: 35px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.35);
+
+  filter: blur(2px);
+
+}
+
+
+/* =========================================================
+   SMALL LEAVES
+   ========================================================= */
+
+.skf-seed-leaf {
+
+  position: absolute;
+
+  width: 32px;
+
+  height: 18px;
+
+  border-radius:
+    100% 0 100% 0;
+
+  background: #4f8a3d;
+
+}
+
+
+.leaf-one {
+
+  top: -5px;
+
+  right: -20px;
+
+  transform: rotate(-20deg);
+}
+
+
+.leaf-two {
+
+  top: 8px;
+
+  right: -27px;
+
+  transform:
+    rotate(25deg)
+    scale(.7);
+
+  opacity: .7;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .skf-contact-3d {
+
+    min-height: auto;
+
+    padding:
+      120px 20px
+      80px;
+
+  }
+
+
+  .skf-contact-orbit {
+
+    position: relative;
+
+    top: auto;
+
+    right: auto;
+
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto 50px;
+
+  }
+
+
+  .skf-contact-3d h2 {
+
+    font-size: clamp(
+      48px,
+      14vw,
+      70px
+    );
+
+    letter-spacing: -2px;
+
+  }
+
+
+  .skf-contact-description {
+
+    margin-top: 28px;
+
+    font-size: 14px;
+
+  }
+
+
+  .skf-contact-details {
+
+    grid-template-columns: 1fr;
+
+    margin-top: 70px;
+
+  }
+
+
+  .skf-contact-detail {
+
+    border-bottom:
+      1px solid rgba(23,63,42,.1);
+
+  }
+
+
+  .skf-location-strip {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+  }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skf-contact-orbit-ring,
+  .skf-contact-seed {
+
+    animation: none;
+
+  }
+
+}/* =========================================
+   MOUSE FOLLOW PHOTO EFFECT
+   ========================================= */
+
+.mouse-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.mouse-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transform: scale(1.08);
+    transition: transform 0.15s ease-out;
+
+    will-change: transform;
+}
+
+/* Slight zoom when mouse enters */
+.mouse-photo:hover img {
+    transform: scale(1.12);
 }
